@@ -19,7 +19,7 @@
     </properties>
 
     <modules>
-        <module>system</module>
+        <module>javasdk-system</module>
     </modules>
 
     <build>
@@ -45,7 +45,7 @@
         <dependencies>
             <dependency>
                 <groupId>com.zkejid.constructor</groupId>
-                <artifactId>system-api</artifactId>
+                <artifactId>javasdk-system-api</artifactId>
                 <version>0.1.0-SNAPSHOT</version>
             </dependency>
 
