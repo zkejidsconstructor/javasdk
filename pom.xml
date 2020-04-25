@@ -20,6 +20,7 @@
 
     <modules>
         <module>javasdk-system</module>
+        <module>javasdk-nio</module>
     </modules>
 
     <build>

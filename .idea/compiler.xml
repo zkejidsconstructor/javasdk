@@ -8,10 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="javasdk-system-api" />
         <module name="javasdk-system-impl" />
+        <module name="java-nio-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="java-nio-api" target="8" />
       <module name="javasdk" target="8" />
+      <module name="javasdk-nio" target="8" />
       <module name="javasdk-system" target="8" />
       <module name="javasdk-system-api" target="8" />
       <module name="javasdk-system-impl" target="8" />
