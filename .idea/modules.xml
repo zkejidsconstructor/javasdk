@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/javasdk-nio/java-nio-api/java-nio-api.iml" filepath="$PROJECT_DIR$/javasdk-nio/java-nio-api/java-nio-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/javasdk.iml" filepath="$PROJECT_DIR$/.idea/javasdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/javasdk-nio/javasdk-nio.iml" filepath="$PROJECT_DIR$/javasdk-nio/javasdk-nio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javasdk-nio/javasdk-nio-api/javasdk-nio-api.iml" filepath="$PROJECT_DIR$/javasdk-nio/javasdk-nio-api/javasdk-nio-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javasdk-nio/javasdk-nio-impl/javasdk-nio-impl.iml" filepath="$PROJECT_DIR$/javasdk-nio/javasdk-nio-impl/javasdk-nio-impl.iml" />
       <module fileurl="file://$PROJECT_DIR$/javasdk-system/javasdk-system.iml" filepath="$PROJECT_DIR$/javasdk-system/javasdk-system.iml" />
       <module fileurl="file://$PROJECT_DIR$/javasdk-system/javasdk-system-api/javasdk-system-api.iml" filepath="$PROJECT_DIR$/javasdk-system/javasdk-system-api/javasdk-system-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/javasdk-system/javasdk-system-impl/javasdk-system-impl.iml" filepath="$PROJECT_DIR$/javasdk-system/javasdk-system-impl/javasdk-system-impl.iml" />

@@ -9,7 +9,17 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>java-nio-api</artifactId>
+    <artifactId>javasdk-nio-impl</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.zkejid.constructor</groupId>
+            <artifactId>javasdk-nio-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zkejid.constructor</groupId>
+            <artifactId>core-api</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
