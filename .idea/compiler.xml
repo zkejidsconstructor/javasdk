@@ -6,14 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="javasdk-nio-api" />
         <module name="javasdk-nio-impl" />
-        <module name="javasdk-system-api" />
+        <module name="javasdk-concurrent-api" />
         <module name="javasdk-system-impl" />
+        <module name="javasdk-concurrent-impl" />
+        <module name="javasdk-nio-api" />
+        <module name="javasdk-system-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="javasdk" target="8" />
+      <module name="javasdk-concurrent" target="8" />
+      <module name="javasdk-concurrent-api" target="8" />
+      <module name="javasdk-concurrent-impl" target="8" />
       <module name="javasdk-nio" target="8" />
       <module name="javasdk-nio-api" target="8" />
       <module name="javasdk-nio-impl" target="8" />

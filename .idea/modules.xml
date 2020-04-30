@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/javasdk.iml" filepath="$PROJECT_DIR$/.idea/javasdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javasdk-concurrent/javasdk-concurrent.iml" filepath="$PROJECT_DIR$/javasdk-concurrent/javasdk-concurrent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javasdk-concurrent/javasdk-concurrent-api/javasdk-concurrent-api.iml" filepath="$PROJECT_DIR$/javasdk-concurrent/javasdk-concurrent-api/javasdk-concurrent-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javasdk-concurrent/javasdk-concurrent-impl/javasdk-concurrent-impl.iml" filepath="$PROJECT_DIR$/javasdk-concurrent/javasdk-concurrent-impl/javasdk-concurrent-impl.iml" />
       <module fileurl="file://$PROJECT_DIR$/javasdk-nio/javasdk-nio.iml" filepath="$PROJECT_DIR$/javasdk-nio/javasdk-nio.iml" />
       <module fileurl="file://$PROJECT_DIR$/javasdk-nio/javasdk-nio-api/javasdk-nio-api.iml" filepath="$PROJECT_DIR$/javasdk-nio/javasdk-nio-api/javasdk-nio-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/javasdk-nio/javasdk-nio-impl/javasdk-nio-impl.iml" filepath="$PROJECT_DIR$/javasdk-nio/javasdk-nio-impl/javasdk-nio-impl.iml" />
