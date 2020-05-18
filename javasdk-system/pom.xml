@@ -10,9 +10,14 @@
     <parent>
         <groupId>com.zkejid.constructor</groupId>
         <artifactId>javasdk</artifactId>
-        <version>0.1.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
 
+    <name>Java SDK Wrapper: java.lang.System</name>
+    <description>
+        Module hiding functionality of Java SDK class java.lang.System.
+    </description>
+    <url>https://github.com/zkejidsconstructor/javasdk/tree/master/javasdk-system</url>
 
     <modules>
         <module>javasdk-system-api</module>

@@ -5,11 +5,16 @@
     <parent>
         <artifactId>javasdk-concurrent</artifactId>
         <groupId>com.zkejid.constructor</groupId>
-        <version>0.1.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>javasdk-concurrent-api</artifactId>
 
+    <name>Java SDK Wrapper: java.util.concurrent API</name>
+    <description>
+        API of module hiding functionality of Java SDK package java.util.concurrent.
+    </description>
+    <url>https://github.com/zkejidsconstructor/javasdk/tree/master/javasdk-concurrent/javasdk-concurrent-api</url>
 
 </project>

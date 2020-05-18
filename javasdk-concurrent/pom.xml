@@ -5,16 +5,21 @@
     <parent>
         <artifactId>javasdk</artifactId>
         <groupId>com.zkejid.constructor</groupId>
-        <version>0.1.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>javasdk-concurrent</artifactId>
+
+    <name>Java SDK Wrapper: java.util.concurrent</name>
+    <description>
+        Module hiding functionality of Java SDK package java.util.concurrent.
+    </description>
+    <url>https://github.com/zkejidsconstructor/javasdk/tree/master/javasdk-concurrent</url>
+
     <packaging>pom</packaging>
     <modules>
         <module>javasdk-concurrent-api</module>
         <module>javasdk-concurrent-impl</module>
     </modules>
-
 
 </project>
