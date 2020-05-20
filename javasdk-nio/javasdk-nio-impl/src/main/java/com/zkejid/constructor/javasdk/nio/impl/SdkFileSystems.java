@@ -30,7 +30,7 @@ public class SdkFileSystems implements FileSystems, ConstructorPart {
     }
 
     @Override
-    public void putImplementation(Class<?> aClass, Object o) {
+    public void putImplementation(Class<?> aClass, Object ... o) {
         throw new ConstructionException("Module doesn't have dependencies");
     }
 

@@ -24,6 +24,9 @@
     <maven.javadoc.plugin.version>3.2.0</maven.javadoc.plugin.version>
     <maven.gpg.plugin.version>1.6</maven.gpg.plugin.version>
     <maven.staging.plugin.version>1.6.8</maven.staging.plugin.version>
+    <constructor.javasdk.version>1.0.0</constructor.javasdk.version>
+    <constructor.core.version>1.0.0</constructor.core.version>
+    <junit.jupiter.version>5.6.2</junit.jupiter.version>
   </properties>
 
   <modules>
@@ -48,99 +51,109 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${maven.surefire.plugin.version}</version>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <version>${maven.source.plugin.version}</version>
-        <executions>
-          <execution>
-            <id>attach-sources</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>jar-no-fork</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>${maven.javadoc.plugin.version}</version>
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-            <!--          TODO: fix issue with wrong version of javadoc -->
-            <!--          <configuration>-->
-            <!--            <javadocExecutable>/usr/lib/jvm/bellsoft-java13-i586/bin/javadoc</javadocExecutable>-->
-            <!--          </configuration>-->
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-gpg-plugin</artifactId>
-        <version>${maven.gpg.plugin.version}</version>
-        <executions>
-          <execution>
-            <id>sign-artifacts</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>sign</goal>
-            </goals>
-            <configuration>
-              <!--          get from local pom -->
-              <keyname>${gpg.keyname}</keyname>
-              <passphraseServerId>${gpg.keyname}</passphraseServerId>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>${maven.staging.plugin.version}</version>
-        <extensions>true</extensions>
-        <configuration>
-          <serverId>ossrh</serverId>
-          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>
-        </configuration>
-      </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <id>deployment</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>${maven.source.plugin.version}</version>
+            <executions>
+              <execution>
+                <id>attach-sources</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>jar-no-fork</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>${maven.javadoc.plugin.version}</version>
+            <executions>
+              <execution>
+                <id>attach-javadocs</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+                <!--          TODO: fix issue with wrong version of javadoc -->
+                <!--          <configuration>-->
+                <!--            <javadocExecutable>/usr/lib/jvm/bellsoft-java13-i586/bin/javadoc</javadocExecutable>-->
+                <!--          </configuration>-->
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>${maven.gpg.plugin.version}</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+                <configuration>
+                  <!--          get from local pom -->
+                  <keyname>${gpg.keyname}</keyname>
+                  <passphraseServerId>${gpg.keyname}</passphraseServerId>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.sonatype.plugins</groupId>
+            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <version>${maven.staging.plugin.version}</version>
+            <extensions>true</extensions>
+            <configuration>
+              <serverId>ossrh</serverId>
+              <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+              <autoReleaseAfterClose>true</autoReleaseAfterClose>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>com.zkejid.constructor</groupId>
         <artifactId>javasdk-system-api</artifactId>
-        <version>0.1.0-SNAPSHOT</version>
+        <version>${constructor.javasdk.version}</version>
       </dependency>
       <dependency>
         <groupId>com.zkejid.constructor</groupId>
         <artifactId>javasdk-nio-api</artifactId>
-        <version>0.1.0-SNAPSHOT</version>
+        <version>${constructor.javasdk.version}</version>
       </dependency>
       <dependency>
         <groupId>com.zkejid.constructor</groupId>
         <artifactId>javasdk-concurrent-api</artifactId>
-        <version>0.1.0-SNAPSHOT</version>
+        <version>${constructor.javasdk.version}</version>
       </dependency>
 
       <dependency>
         <artifactId>core-api</artifactId>
         <groupId>com.zkejid.constructor</groupId>
-        <version>0.1.0-SNAPSHOT</version>
+        <version>${constructor.core.version}</version>
       </dependency>
 
       <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter</artifactId>
-        <version>5.6.2</version>
+        <version>${junit.jupiter.version}</version>
         <scope>test</scope>
       </dependency>
     </dependencies>

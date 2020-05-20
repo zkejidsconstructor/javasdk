@@ -24,7 +24,7 @@ public class SystemPart implements ConstructorPart {
     }
 
     @Override
-    public void putImplementation(Class<?> aClass, Object o) {
+    public void putImplementation(Class<?> aClass, Object ... o) {
         // No-op
     }
 

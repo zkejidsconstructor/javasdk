@@ -15,16 +15,16 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="javasdk" target="8" />
-      <module name="javasdk-concurrent" target="8" />
-      <module name="javasdk-concurrent-api" target="8" />
-      <module name="javasdk-concurrent-impl" target="8" />
-      <module name="javasdk-nio" target="8" />
-      <module name="javasdk-nio-api" target="8" />
-      <module name="javasdk-nio-impl" target="8" />
-      <module name="javasdk-system" target="8" />
-      <module name="javasdk-system-api" target="8" />
-      <module name="javasdk-system-impl" target="8" />
+      <module name="javasdk" target="9" />
+      <module name="javasdk-concurrent" target="9" />
+      <module name="javasdk-concurrent-api" target="9" />
+      <module name="javasdk-concurrent-impl" target="9" />
+      <module name="javasdk-nio" target="9" />
+      <module name="javasdk-nio-api" target="9" />
+      <module name="javasdk-nio-impl" target="9" />
+      <module name="javasdk-system" target="9" />
+      <module name="javasdk-system-api" target="9" />
+      <module name="javasdk-system-impl" target="9" />
     </bytecodeTargetLevel>
   </component>
 </project>
